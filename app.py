@@ -9,6 +9,7 @@ print("Type 2 - Addition")
 print("Type 3 - Subtraction")
 print("Type 4 - Power / exponential")
 print("Type 5 - divide")
+print('Type 6 - Floor division')
 
 operator = int(input("Enter the Option from above :"))
 
@@ -26,6 +27,9 @@ elif operator == 4:
 
 elif operator == 5:
     print(divide(n1,n2))
+
+elif operator == 6:
+    print(floor(n1,n2))
 
 else:
     print("Please select vaild Option")
