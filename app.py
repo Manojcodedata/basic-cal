@@ -1,36 +1,42 @@
 from helpers import *
+import streamlit as st
 
-n1 = int(input("Enter the first number :"))
-n2 = int(input("Enter the Second number :"))
+st.title('Calculator of two number')
 
-print("Select the operation to do on the two number")
-print("Type 1 - Multiplication")
-print("Type 2 - Addition")
-print("Type 3 - Subtraction")
-print("Type 4 - Power / exponential")
-print("Type 5 - divide")
-print('Type 6 - Floor division')
+#n1 = int(input("Enter the first number :"))
+n1 = int(st.number_input("Enter the first number :"))
+#n2 = int(input("Enter the Second number :"))
+n2 = int(st.number_input("Enter the second number :"))
 
-operator = int(input("Enter the Option from above :"))
+st.write("Select the operation to do on the two number")
+st.write("Type 1 - Multiplication")
+st.write("Type 2 - Addition")
+st.write("Type 3 - Subtraction")
+st.write("Type 4 - Power / exponential")
+st.write("Type 5 - divide")
+st.write('Type 6 - Floor division')
+
+#operator = int(input("Enter the Option from above :"))
+operator = int(st.number_input("Enter the Option from above :"))
 
 if operator == 1:
-    print(multiply(n1,n2))
+    st.write(multiply(n1,n2))
 
 elif operator == 2:
-    print(add(n1,n2))
+    st.write(add(n1,n2))
 
 elif operator == 3:
-    print(sub(n1,n2))
+    st.write(sub(n1,n2))
 
 elif operator == 4:
-    print(power(n1,n2))
+    st.write(power(n1,n2))
 
 elif operator == 5:
-    print(divide(n1,n2))
+    st.write(divide(n1,n2))
 
 elif operator == 6:
-    print(floor(n1,n2))
+    st.write(floor(n1,n2))
 
 else:
-    print("Please select vaild Option")
+    st.write("Please select vaild Option")
 
